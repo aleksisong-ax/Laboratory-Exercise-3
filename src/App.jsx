@@ -5,6 +5,7 @@ import products from './data/products.js';
 import './App.css';
 
 function App() {
+  // The parent owns cart state and shares its add-to-cart callback with each card.
   const [cartCount, setCartCount] = useState(0);
   const [lastAdded, setLastAdded] = useState('');
 
@@ -45,6 +46,7 @@ function App() {
         </div>
         <div className="results-line"><span>THE FULL COLLECTION · {products.length} FINDS</span><span>CURATED FOR CAMPUS LIFE</span></div>
         <div className="product-grid">
+          {/* Render each product with a unique key and optional badge content. */}
           {products.map((product) => (
             <ProductCard key={product.id} {...product} onAddToCart={handleAddToCart}>
               {product.id === 1 && <span className="badge badge--new">New</span>}
