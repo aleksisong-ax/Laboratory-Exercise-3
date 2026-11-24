@@ -37,3 +37,7 @@ git push -u origin main
 ```
 
 Replace the sample URL with your actual repository URL. No GitHub account or remote was connected here, so publication remains to be done by you.
+
+## GitHub Pages hosting
+
+The `main` branch includes a GitHub Actions workflow that builds this app with the correct repository path and deploys it to Pages. In the repository settings, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**. The site URL will be `https://aleksisong-ax.github.io/Laboratory-Exercise-3/` after the first successful workflow run.
